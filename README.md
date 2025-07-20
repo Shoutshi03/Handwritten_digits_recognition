@@ -106,7 +106,8 @@ git commit -m "Initial commit of MNIST Gradio app"
 git push
 ```
 
-Hugging Face Spaces détectera automatiquement votre application Gradio et la déploiera. Le lien de votre application sera disponible sur la page de votre Space.
+Hugging Face Spaces détectera automatiquement votre application Gradio et la déploiera. 
 
-**Note importante** : Le modèle `mnist_cnn_model.h5` doit être présent dans le même répertoire que `app.py` pour que l'application puisse le charger correctement. Le dataset MNIST sera téléchargé automatiquement par TensorFlow lors de l'exécution de `train_mnist.py` ou lors du premier chargement du modèle si les données ne sont pas déjà présentes.
+Le lien de votre application sera disponible sur la page de votre Space : https://huggingface.co/spaces/Shoutshi03/Handwritten_digits_recognition
+
 
