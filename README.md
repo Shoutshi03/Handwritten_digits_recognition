@@ -1,12 +1,13 @@
-# Reconnaissance de Chiffres MNIST avec CNN et Interface Gradio
+# Hand written digits recognition
 
-## Description
+## Overview
 
-Ce projet implémente un système de reconnaissance de chiffres manuscrits utilisant un réseau de neurones convolutionnel (CNN) entraîné sur le dataset MNIST. L'application inclut une interface web interactive développée avec Gradio qui permet de dessiner des chiffres et d'obtenir des prédictions en temps réel.
+This project implements a handwritten digits recognition using a convolutionnal neural networks (CNNs) trained on MNIST dataset.
+the project include a web interface developped with gradio that allows users to draw a digit and get prediction in reel time.
 
-## Fonctionnalités
+## Functionalities
 
-- **Modèle CNN** : Architecture de réseau de neurones convolutionnel optimisée pour la reconnaissance de chiffres
+- **CNN Model** : Architecture de réseau de neurones convolutionnel optimisée pour la reconnaissance de chiffres
 - **Interface interactive** : Zone de dessin pour tracer des chiffres à la main
 - **Prédictions en temps réel** : Reconnaissance instantanée avec niveau de confiance
 - **Analyse détaillée** : Probabilités pour chaque chiffre (0-9)
@@ -20,17 +21,16 @@ Le modèle CNN comprend :
 - 1 couche dense cachée (64 neurones)
 - 1 couche de sortie avec activation softmax (10 classes)
 
-## Fichiers du Projet
+## Project Files
 
-- `main.py` : Définition de l'architecture du modèle CNN
-- `main.ipynb` : Script d'entraînement du modèle
+- `main.ipynb` : Script de pipeline.
 - `app.py` : Interface Gradio pour l'application web
 - `mnist_cnn_model.h5` : Modèle entraîné sauvegardé
 - `README.md` : Documentation du projet
 
-## Installation et Utilisation
+## Installation
 
-### Prérequis
+### requirements
 
 ```bash
 python -m venv venv
@@ -44,9 +44,9 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### Entraînement du Modèle
+### Model training
 
-### Lancement de l'Interface Web
+### Web Interface
 
 ```bash
 python app.py
@@ -88,13 +88,9 @@ L'application effectue automatiquement :
 - **NumPy** : Calculs numériques
 - **PIL** : Manipulation d'images
 
-## Auteur
+## Permanent deploiement
 
-Projet développé avec Manus AI pour la reconnaissance de chiffres manuscrits.
-
-## Déploiement Permanent (pour l'utilisateur)
-
-Pour déployer cette application de manière permanente, nous avons utilisé des plateformes comme [Hugging Face Spaces](https://huggingface.co/spaces) .
+in order to deploy permenently applications, we will use Hugging Face [Hugging Face Spaces](https://huggingface.co/spaces) .
 
 ```bash
 git add .
