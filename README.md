@@ -14,6 +14,7 @@ Ce projet implémente un système de reconnaissance de chiffres manuscrits utili
 ## Architecture du Modèle
 
 Le modèle CNN comprend :
+
 - 3 couches de convolution avec activation ReLU
 - 2 couches de max pooling
 - 1 couche dense cachée (64 neurones)
@@ -21,9 +22,9 @@ Le modèle CNN comprend :
 
 ## Fichiers du Projet
 
-- `mnist_model.py` : Définition de l'architecture du modèle CNN
-- `train_mnist.py` : Script d'entraînement du modèle
-- `gradio_app_simple.py` : Interface Gradio pour l'application web
+- `main.py` : Définition de l'architecture du modèle CNN
+- `main.ipynb` : Script d'entraînement du modèle
+- `app.py` : Interface Gradio pour l'application web
 - `mnist_cnn_model.h5` : Modèle entraîné sauvegardé
 - `README.md` : Documentation du projet
 
@@ -32,22 +33,24 @@ Le modèle CNN comprend :
 ### Prérequis
 
 ```bash
-pip install tensorflow gradio numpy opencv-python pillow
+python -m venv venv
+```
+
+```bash
+venv\Scripts\activate
+```
+
+```bash
+pip install -r requirements.txt
 ```
 
 ### Entraînement du Modèle
 
-```bash
-python3 train_mnist.py
-```
-
 ### Lancement de l'Interface Web
 
 ```bash
-python3 gradio_app_simple.py
+python app.py
 ```
-
-L'application sera accessible sur `http://localhost:7862`
 
 ## Utilisation de l'Interface
 
@@ -62,6 +65,7 @@ L'application sera accessible sur `http://localhost:7862`
 ## Performances du Modèle
 
 Le modèle atteint une précision élevée sur le dataset de test MNIST grâce à :
+
 - Architecture CNN adaptée aux images
 - Prétraitement approprié des données
 - Entraînement sur 60,000 images d'entraînement
@@ -70,6 +74,7 @@ Le modèle atteint une précision élevée sur le dataset de test MNIST grâce �
 ## Prétraitement des Images
 
 L'application effectue automatiquement :
+
 - Redimensionnement à 28x28 pixels
 - Conversion en niveaux de gris
 - Inversion des couleurs (fond noir, chiffre blanc)
@@ -87,18 +92,9 @@ L'application effectue automatiquement :
 
 Projet développé avec Manus AI pour la reconnaissance de chiffres manuscrits.
 
-
-
 ## Déploiement Permanent (pour l'utilisateur)
 
-Pour déployer cette application de manière permanente, vous pouvez utiliser des plateformes comme [Hugging Face Spaces](https://huggingface.co/spaces) ou [Render](https://render.com/). Voici les étapes générales pour un déploiement sur Hugging Face Spaces :
-
-1.  **Créer un nouveau Space** : Allez sur [Hugging Face Spaces](https://huggingface.co/spaces), connectez-vous et créez un nouveau Space. Choisissez le SDK `Gradio`.
-2.  **Cloner le dépôt** : Clonez le dépôt Git de votre nouveau Space sur votre machine locale.
-3.  **Ajouter les fichiers du projet** : Copiez tous les fichiers de ce projet (`mnist_model.py`, `train_mnist.py`, `gradio_app_fixed.py`, `mnist_cnn_model.h5`, `requirements.txt`, `README.md`) dans le dossier cloné.
-4.  **Renommer l'application Gradio** : Renommez `gradio_app_fixed.py` en `app.py` (c'est le nom par défaut attendu par Hugging Face Spaces pour les applications Gradio).
-5.  **Mettre à jour `requirements.txt`** : Assurez-vous que le fichier `requirements.txt` contient toutes les dépendances nécessaires (`tensorflow`, `gradio`, `numpy`, `opencv-python`, `Pillow`).
-6.  **Pousser les modifications** : Poussez tous les fichiers vers le dépôt Git de votre Space.
+Pour déployer cette application de manière permanente, nous avons utilisé des plateformes comme [Hugging Face Spaces](https://huggingface.co/spaces) .
 
 ```bash
 git add .
@@ -106,8 +102,8 @@ git commit -m "Initial commit of MNIST Gradio app"
 git push
 ```
 
-Hugging Face Spaces détectera automatiquement votre application Gradio et la déploiera. 
+Hugging Face Spaces détectera automatiquement votre application Gradio et la déploiera.
 
-Le lien de votre application sera disponible sur la page de votre Space : https://huggingface.co/spaces/Shoutshi03/Handwritten_digits_recognition
+Le lien de votre application sera disponible sur la page de votre Space :
 
-
+[Handwritten_digits_recognition](https://huggingface.co/spaces/Shoutshi03/Handwritten_digits_recognition)
